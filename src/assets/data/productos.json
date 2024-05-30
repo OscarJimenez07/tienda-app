@@ -1,0 +1,33 @@
+[
+    {
+      "presupuesto": 5000,
+      "unidad": "Departamento de TI",
+      "producto": "Laptop",
+      "cantidad": 10,
+      "valorUnitario": 500,
+      "valorTotal": 5000,
+      "fechaAdquisicion": "2023-01-15",
+      "proveedor": "Proveedor A"
+    },
+    {
+      "presupuesto": 3000,
+      "unidad": "Departamento de Marketing",
+      "producto": "Cámara",
+      "cantidad": 5,
+      "valorUnitario": 600,
+      "valorTotal": 3000,
+      "fechaAdquisicion": "2023-02-20",
+      "proveedor": "Proveedor B"
+    },
+    {
+      "presupuesto": 2000,
+      "unidad": "Departamento de Recursos Humanos",
+      "producto": "Proyector",
+      "cantidad": 2,
+      "valorUnitario": 1000,
+      "valorTotal": 2000,
+      "fechaAdquisicion": "2023-03-10",
+      "proveedor": "Proveedor C"
+    }
+  ]
+  
