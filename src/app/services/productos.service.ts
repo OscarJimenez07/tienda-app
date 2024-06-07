@@ -19,7 +19,7 @@ export interface Producto {
   providedIn: 'root'
 })
 export class ProductosService {
-  private baseUrl = 'http://192.168.1.12/ActivacionCupo/productos.php';
+  private baseUrl = 'http://localhost:8081/DatosTienda/productos.php';
 
   constructor(private http: HttpClient) { }
 

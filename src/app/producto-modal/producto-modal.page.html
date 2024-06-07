@@ -10,35 +10,35 @@
 <ion-content *ngIf="producto">
   <ion-item>
     <ion-label position="stacked">Producto</ion-label>
-    <ion-input [(ngModel)]="producto.producto"></ion-input>
+    <ion-input [(ngModel)]="producto.producto" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Unidad</ion-label>
-    <ion-input [(ngModel)]="producto.unidad"></ion-input>
+    <ion-input [(ngModel)]="producto.unidad" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Presupuesto</ion-label>
-    <ion-input [(ngModel)]="producto.presupuesto" type="number"></ion-input>
+    <ion-input [(ngModel)]="producto.presupuesto" type="number" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Cantidad</ion-label>
-    <ion-input [(ngModel)]="producto.cantidad" type="number"></ion-input>
+    <ion-input [(ngModel)]="producto.cantidad" (ngModelChange)="calculateTotal()" type="number" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Valor Unitario</ion-label>
-    <ion-input [(ngModel)]="producto.valorUnitario" type="number"></ion-input>
+    <ion-input [(ngModel)]="producto.valorUnitario" (ngModelChange)="calculateTotal()" type="number" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Valor Total</ion-label>
-    <ion-input [(ngModel)]="producto.valorTotal" type="number"></ion-input>
+    <ion-input [(ngModel)]="producto.valorTotal" type="number" required readonly="true"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Fecha de Adquisición</ion-label>
-    <ion-input [(ngModel)]="producto.fechaAdquisicion" type="date"></ion-input>
+    <ion-input [(ngModel)]="producto.fechaAdquisicion" type="date" min="{{ getMaxDate() }}"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Proveedor</ion-label>
-    <ion-input [(ngModel)]="producto.proveedor"></ion-input>
+    <ion-input [(ngModel)]="producto.proveedor" required></ion-input>
   </ion-item>
   <ion-footer>
     <ion-button expand="full" (click)="save()">Guardar</ion-button>
